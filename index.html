@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caçadores de Carbono</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="hud">
+            <div>Tempo: <span id="timer">30</span>s</div>
+            <div>CO₂ Capturado: <span id="co2Counter">0</span></div>
+            <div>Bioma: <span id="biomeName">Floresta Tropical</span></div>
+            <div id="powerUpIndicator"></div>
+        </div>
+        
+        <div id="biomeInfo">
+            Floresta Tropical: Armazena grandes quantidades de CO₂. Desmatamento libera esse carbono de volta à atmosfera.
+        </div>
+        
+        <div id="startScreen" class="screen">
+            <h1>Caçadores de Carbono</h1>
+            <p>Ajude o cientista a capturar moléculas de CO₂ antes que elas cheguem à atmosfera!</p>
+            <button id="startButton" class="gameButton">Começar Jogo</button>
+        </div>
+        
+        <div id="levelCompleteScreen" class="screen" style="display: none;">
+            <h1>Bioma Concluído!</h1>
+            <p>Você capturou <span id="finalCo2">0</span> moléculas de CO₂!</p>
+            <p id="biomeFact">As florestas tropicais são os pulmões do planeta!</p>
+            <button id="nextLevelButton" class="gameButton">Próximo Bioma</button>
+        </div>
+        
+        <div id="gameOverScreen" class="screen" style="display: none;">
+            <h1>Missão Completa!</h1>
+            <p>Você ajudou a salvar o planeta capturando <span id="totalCo2">0</span> moléculas de CO₂!</p>
+            <button id="restartButton" class="gameButton">Jogar Novamente</button>
+        </div>
+        
+        <div id="mobileControls">
+            <button id="leftButton" class="mobileButton">←</button>
+            <button id="rightButton" class="mobileButton">→</button>
+            <button id="jumpButton" class="mobileButton">↑</button>
+            <button id="actionButton" class="mobileButton">Ação</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
